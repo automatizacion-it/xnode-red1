@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "25cf0fe3346c4c86",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "316ac1cd0f1ef94a",
         "type": "inject",
         "z": "f35543c2729477a9",
@@ -129,6 +137,49 @@
         "linkType": "static",
         "timeout": "30",
         "x": 420,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ceca9e6802f7f54",
+        "type": "function",
+        "z": "25cf0fe3346c4c86",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "61a8fadfd911f2ef"
+            ]
+        ]
+    },
+    {
+        "id": "61a8fadfd911f2ef",
+        "type": "switch",
+        "z": "25cf0fe3346c4c86",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
         "y": 260,
         "wires": [
             []
