@@ -1,1 +1,137 @@
-[]
+[
+    {
+        "id": "f35543c2729477a9",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f29a7b3c8d0db15f",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "316ac1cd0f1ef94a",
+        "type": "inject",
+        "z": "f35543c2729477a9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 40,
+        "wires": [
+            [
+                "3335bef9245dddf5"
+            ]
+        ]
+    },
+    {
+        "id": "3335bef9245dddf5",
+        "type": "debug",
+        "z": "f35543c2729477a9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "668e91b87d4b3dcf",
+        "type": "inject",
+        "z": "f29a7b3c8d0db15f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 120,
+        "wires": [
+            [
+                "73ca2c9e6bcc7785"
+            ]
+        ]
+    },
+    {
+        "id": "73ca2c9e6bcc7785",
+        "type": "debug",
+        "z": "f29a7b3c8d0db15f",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "313488b0aa8ed26b",
+        "type": "complete",
+        "z": "f29a7b3c8d0db15f",
+        "name": "",
+        "scope": [],
+        "uncaught": false,
+        "x": 210,
+        "y": 260,
+        "wires": [
+            [
+                "fcab844fe45f6273"
+            ]
+        ]
+    },
+    {
+        "id": "fcab844fe45f6273",
+        "type": "link call",
+        "z": "f29a7b3c8d0db15f",
+        "name": "",
+        "links": [],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    }
+]
